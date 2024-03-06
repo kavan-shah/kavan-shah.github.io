@@ -53,6 +53,48 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
+// projects variables
+const projectItems = document.querySelectorAll("[data-filter-item]");
+const projectsModalContainer = document.querySelector("[data-projects-modal-container]");
+const projectsModalCloseBtn = document.querySelector("[data-projects-modal-close-btn]");
+const projectsOverlay = document.querySelector("[data-projects-overlay]");
+
+// projects modal variable
+// const projectsModalImg = document.querySelector("[data-projects-modal-img]");
+const projectsModalTitle = document.querySelector("[data-projects-modal-title]");
+const projectsModalCategory = document.querySelector("[data-projects-modal-category]");
+const projectsModalInformation = document.querySelector("[data-projects-modal-information]");
+
+// projects modal toggle function
+const projectsModalFunc = function () {
+  projectsModalContainer.classList.toggle("active");
+  projectsOverlay.classList.toggle("active");
+}
+
+// add click event to all project items
+for (let i = 0; i < projectItems.length; i++) {
+  projectItems[i].addEventListener("click", function () {
+    // projectsModalImg.src = this.querySelector(".project-img img").src;
+    // projectsModalImg.alt = this.querySelector(".project-img img").alt;
+    projectsModalTitle.innerHTML = this.querySelector("[project-title]").innerHTML;
+    projectsModalCategory.innerHTML = this.querySelector("[project-category]").innerHTML;
+    
+    const projectInformation = this.querySelector("[project-information]");
+    if (projectInformation) {
+      projectsModalInformation.innerHTML = projectInformation.innerHTML;
+    } else {
+      projectsModalInformation.innerHTML = ""; // Clear the content if not available
+    }
+
+    projectsModalFunc();
+  });
+}
+
+// add click event to projects modal close button
+projectsModalCloseBtn.addEventListener("click", projectsModalFunc);
+projectsOverlay.addEventListener("click", projectsModalFunc);
+
+
 
 
 // custom select variables
