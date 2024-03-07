@@ -1130,6 +1130,7 @@ main {
 .project-modal-information { 
   margin-left: 10px;
   margin-right: 18px;
+  margin-bottom: 10px;
   /* overflow-y: scroll; /* Allow vertical scrolling */
   /* overflow-x: auto; Hide horizontal overflow */
   max-height: 100%; /* Adjust as needed */
@@ -1138,6 +1139,7 @@ main {
   font-size: var(--fs-5);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  border-radius: 7px;
 }
 
 .project-modal-information::-webkit-scrollbar { 
