@@ -65,6 +65,8 @@ const projectsModalTitle = document.querySelector("[data-projects-modal-title]")
 const projectsModalCategory = document.querySelector("[data-projects-modal-category]");
 const projectsModalInformation = document.querySelector("[data-projects-modal-information]");
 
+// projectsModalInformation.classList.add("has-scrollbar");
+
 // projects modal toggle function
 const projectsModalFunc = function () {
   projectsModalContainer.classList.toggle("active");

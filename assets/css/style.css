@@ -1074,8 +1074,10 @@ main {
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
-  max-width: 1200px; /* Set a maximum width for the modal */
-  width: 100%; /* Make the modal take full width */
+  max-width: 1200px;
+  width: 100%; 
+  max-height: 800px;
+  height: 100%; 
 }
 
 .project-modal-container.active .project-modal {
@@ -1105,6 +1107,12 @@ main {
 
 .project-modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
+.project-modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure the container takes 100% height */
+}
+
 .project-modal-title { 
   margin-bottom: 0px;
   margin-left: 10px; 
@@ -1121,22 +1129,39 @@ main {
 
 .project-modal-information { 
   margin-left: 10px;
-  margin-right: 10px;
-  overflow-y: auto; /* Allow vertical scrolling */
-  overflow-x: hidden; /* Hide horizontal overflow */
+  margin-right: 18px;
+  /* overflow-y: scroll; /* Allow vertical scrolling */
+  /* overflow-x: auto; Hide horizontal overflow */
+  max-height: 100%; /* Adjust as needed */
+  overflow-y: auto;
   color: var(--light-gray);
   font-size: var(--fs-5);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-/* .project-modal-content p {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-} */
+.project-modal-information::-webkit-scrollbar { 
+  display: inline;
+  width: 19px;
+}
 
+.project-modal-information::-webkit-scrollbar-track { 
+  background: var(--eerie-black-2);
+}
+
+.project-modal-information::-webkit-scrollbar-thumb {
+  border: 5px solid var(--eerie-black-2);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 19px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.project-modal-information::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
+
+.project-modal-information::-webkit-scrollbar-button { 
+  height: 100%;
+}
 
 
 
