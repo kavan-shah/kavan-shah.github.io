@@ -1142,6 +1142,7 @@ main {
   /* overflow-x: auto; Hide horizontal overflow */
   max-height: 100%; /* Adjust as needed */
   overflow-y: auto;
+  overflow-x: hidden;
   color: var(--light-gray);
   font-size: var(--fs-5);
   font-weight: var(--fw-300);
@@ -1172,6 +1173,13 @@ main {
   height: 100%;
 }
 
+.responsive-video {
+  width: 100%;
+  max-width: 560px;
+  height: 315px; /* Set the desired height */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
 
