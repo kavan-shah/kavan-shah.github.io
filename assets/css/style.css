@@ -858,10 +858,9 @@ main {
 .experience-text li::before {
   content: "\2022"; /* Unicode character for bullet point */
   color: var(--white-1); /* Change to the color you desire */
-  font-size: 1.5em; /* Adjust the font size of the bullet point */
   margin-right: 0.3em; /* Adjust spacing between bullet and text */
-  margin-left: -0.9em;
-  font-size: 1.5em;
+  margin-left: -0.85em;
+  font-size: 1.625em;
   line-height: 0;
 }
 
