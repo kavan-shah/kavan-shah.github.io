@@ -809,7 +809,7 @@ main {
 .timeline-list span {
   color: var(--white-1);
   font-weight: var(--fw-300);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -826,7 +826,7 @@ main {
   content: "";
   position: absolute;
   top: 5px;
-  left: -33px;
+  left: -32px;
   height: 6px;
   width: 6px;
   background: var(--text-gradient-yellow);
@@ -842,27 +842,26 @@ main {
   max-width: 750px;
 }
 
-.experience-text {
-  color: var(--white-2); /* Text color */
-  font-weight: var(--fw-300); /* Font weight */
-  line-height: 1.5; /* Line height */
-  list-style-type: none; /* Bullet point style */
-  margin-left: 20px; /*Left margin for the list*/
+.bullet-text {
+  color: var(--white-2);
+  font-weight: var(--fw-300);
+  line-height: 1.5;
+  margin-left: 20px;
+  list-style-type: none;
 }
 
-.experience-text li {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Vertically center the content */
+.bullet-text li {
+  display: flex;
+  list-style-position: outside;
 }
 
-.experience-text li::before {
-  content: "\2022"; /* Unicode character for bullet point */
-  color: var(--white-1); /* Change to the color you desire */
-  margin-right: 0.3em; /* Adjust spacing between bullet and text */
-  margin-left: -0.85em;
-  font-size: 1.625em;
-  line-height: 0;
+.bullet-text li::before {
+  content: "\2022";
+  color: var(--white-1);
+  margin-right: 0.5em;
+  margin-left: -1.25em;
 }
+
 
 /**
  * skills 
