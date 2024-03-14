@@ -842,6 +842,28 @@ main {
   max-width: 750px;
 }
 
+.experience-text {
+  color: var(--white-2); /* Text color */
+  font-weight: var(--fw-300); /* Font weight */
+  line-height: 1.5; /* Line height */
+  list-style-type: none; /* Bullet point style */
+  margin-left: 20px; /*Left margin for the list*/
+}
+
+.experience-text li {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center the content */
+}
+
+.experience-text li::before {
+  content: "\2022"; /* Unicode character for bullet point */
+  color: var(--white-1); /* Change to the color you desire */
+  font-size: 1.5em; /* Adjust the font size of the bullet point */
+  margin-right: 0.3em; /* Adjust spacing between bullet and text */
+  margin-left: -0.9em;
+  font-size: 1.5em;
+  line-height: 0;
+}
 
 /**
  * skills 
@@ -1654,12 +1676,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-list { margin-left: 65px; }
 
-  .timeline-item:not(:last-child)::before { left: -40px; }
+  .timeline-item:not(:last-child)::before { left: -41.5px; }
 
   .timeline-item::after {
     height: 8px;
     width: 8px;
-    left: -43px;
+    left: -45px;
   }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
