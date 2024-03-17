@@ -826,11 +826,11 @@ main {
   content: "";
   position: absolute;
   top: 5px;
-  left: -32px;
+  left: -32.5px;
   height: 6px;
   width: 6px;
   background: var(--text-gradient-yellow);
-  border-radius: 50%;
+  border-radius: 100%;
   box-shadow: 0 0 0 4px var(--jet);
 }
 
