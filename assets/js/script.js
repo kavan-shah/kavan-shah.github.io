@@ -1,5 +1,57 @@
 'use strict';
 
+// Array of titles
+const titles = ['Robotics Engineer', 'Mechatronics Engineer', 'Automation Engineer', 'Controls Engineer'];
+
+function updateTitle() {
+  const titleContainer = document.querySelector('.title-container');
+  const titles = ['Robotics Engineer', 'Mechatronics Engineer', 'Automation Engineer', 'Controls Engineer'];
+  let currentTitleElement = document.querySelector('.title-text');
+
+  // Create a new title element for the next title
+  const nextIndex = (titles.indexOf(currentTitleElement?.textContent) + 1) % titles.length;
+  const newTitle = titles[nextIndex];
+  const newTitleElement = document.createElement('div');
+  newTitleElement.textContent = newTitle;
+  newTitleElement.classList.add('title-text');
+  newTitleElement.style.opacity = '0'; // Start with 0 opacity
+  newTitleElement.style.transform = 'translateY(25px)'; // Start position
+
+  // Insert the new title element after the current title element
+  titleContainer.appendChild(newTitleElement);
+
+  // Slide up animation
+  const slideUp = () => {
+      const step = 1 / 100; // Number of steps for animation
+      let opacity = 0;
+      let position = 0; // Start position
+      const interval = setInterval(() => {
+          opacity += step;
+          position += step * 25; // Move upwards
+          if (currentTitleElement && currentTitleElement.parentNode === titleContainer) {
+              currentTitleElement.style.opacity = 1 - opacity;
+          }
+          newTitleElement.style.opacity = opacity;
+          newTitleElement.style.transform = `translateY(-${position}px)`; // Move upwards
+          if (opacity >= 1) {
+              clearInterval(interval);
+              if (currentTitleElement && currentTitleElement.parentNode === titleContainer) {
+                  titleContainer.removeChild(currentTitleElement);
+              }
+              newTitleElement.style.opacity = 1; // Ensure full opacity
+              newTitleElement.style.transform = 'none'; // Reset transform
+          }
+      }, 7);
+  };
+
+  slideUp();
+}
+
+// Initial call to update title
+updateTitle();
+
+// Set interval to update title every 7.5 seconds
+setInterval(updateTitle, 7500);
 
 
 // element toggle function
