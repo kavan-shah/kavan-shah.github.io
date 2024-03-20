@@ -842,7 +842,7 @@ main {
   max-width: 750px;
 }
 
-.bullet-text {
+.bullet-text, .bullet-text-primary, .bullet-text-secondary {
   color: var(--white-2);
   font-weight: var(--fw-300);
   line-height: 1.5;
@@ -850,16 +850,23 @@ main {
   list-style-type: none;
 }
 
-.bullet-text li {
+.bullet-text li, .bullet-text-secondary li {
   display: flex;
   list-style-position: outside;
 }
 
-.bullet-text li::before {
+.bullet-text li::before, .bullet-text-primary li::before {
   content: "\2022";
   color: var(--white-1);
   margin-right: 0.5em;
   margin-left: -1.25em;
+}
+
+.bullet-text-secondary li::before {
+  content: "\279C";
+  color: var(--white-1);
+  margin-right: 0.5em;
+  margin-left: -1.65em;
 }
 
 
@@ -1948,7 +1955,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 1250px screen
  */
 
-@media (min-width: 1250px) {
+@media (min-width: 1400px) {
 
   /**
    * RESET
@@ -1987,7 +1994,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1350px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -2055,4 +2062,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+}
+
+.bullet-text span {
+  font-weight: bold;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
 }
