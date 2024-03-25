@@ -50,8 +50,8 @@ function updateTitle() {
 // Initial call to update title
 updateTitle();
 
-// Set interval to update title every 7.5 seconds
-setInterval(updateTitle, 7500);
+// Set interval to update title every 5 seconds
+setInterval(updateTitle, 5000);
 
 
 // element toggle function
