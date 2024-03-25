@@ -1473,8 +1473,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: auto; }
 
   .info-content .name { 
-    font-size: 30px; 
-    margin-bottom: 10px;
+    font-size: 28px; 
+    margin-bottom: 12px;
   }
   
   article {padding: 20px;}
@@ -1482,7 +1482,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar {max-height: 120px;}
 
   .navbar-link {
-    font-size: 14px;
+    font-size: 12px;
   }
 
 }
