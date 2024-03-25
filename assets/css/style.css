@@ -1476,6 +1476,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 30px; 
     margin-bottom: 10px;
   }
+  
+  article {padding: 20px;}
 
   .sidebar {max-height: 120px;}
 
