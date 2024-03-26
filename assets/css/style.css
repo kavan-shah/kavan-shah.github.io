@@ -1631,7 +1631,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-list { gap: 20px; }
 
-  .navbar-link { --fs-8: 14px; }
+  .navbar-link { 
+    --fs-8: 14px;
+    font-size: 15px; 
+  }
 
 
 
@@ -1969,7 +1972,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 0 20px;
   }
 
-  .navbar-link { font-weight: var(--fw-500); }
+  .navbar-link { 
+    font-weight: var(--fw-500);
+    font-size: 16px;
+  }
 
 
 
