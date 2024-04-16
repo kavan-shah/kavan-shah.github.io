@@ -1447,7 +1447,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 1px screen
  */
 
-@media (min-width: 1px) {
+@media (max-width: 579px) {
 
   /**
    * client
@@ -1462,7 +1462,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   .title-text {
-    margin-top: 2px;
+    margin-top: 1.5px;
   }
 
   /**
@@ -1474,7 +1474,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info-content .name { 
     font-size: 28px; 
-    margin-bottom: 12px;
+    margin-bottom: 1px;
   }
   
   article {padding: 20px;}
@@ -1483,6 +1483,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link {
     font-size: 13.5px;
+  }
+
+  .project-modal-title {
+    margin-right: 45px;
+  }
+
+  .project-modal-information{
+    margin-right: 10px;
+  }
+
+  .modal-close-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .project-modal-information::-webkit-scrollbar { 
+    display: inline;
+    width: 16px;
+  }
+
+  .project-modal-title {
+    font-size: 24px;
+  }
+
+  .project-modal-category {
+    font-size: 17px;
   }
 
 }
