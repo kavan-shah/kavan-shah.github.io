@@ -1236,8 +1236,8 @@ main {
 
 .responsive-video {
   width: 100%;
-  max-width: 560px;
-  height: 315px; /* Set the desired height */
+  max-width: 640px;
+  height: 360px; /* 9:16 */
   margin-top: 10px;
   margin-bottom: 10px;
 }
