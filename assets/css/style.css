@@ -166,6 +166,23 @@ body { background: var(--smoky-black); }
   #REUSED STYLE
 \*-----------------------------------*/
 
+.download-link {
+  margin-left: 10px; /* Adjust the spacing between the text and the icon */
+  color: var(--orange-yellow-crayola);    /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.download-link ion-icon {
+  font-size: 1em; /* Adjust the size of the icon if needed */
+  vertical-align: middle; /* Align the icon with the text */
+}
+
+.h2.article-title {
+  display: flex;
+  align-items: center;
+}
+
+
 .sidebar,
 article {
   background: var(--eerie-black-2);
