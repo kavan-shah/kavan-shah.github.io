@@ -1218,6 +1218,19 @@ main {
   margin-bottom: 10px;
 }
 
+.responsive-image {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  display: block;
+}
+
+.responsive-image2 {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
 
 
 /*-----------------------------------*\
